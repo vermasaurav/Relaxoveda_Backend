@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const Advertise = require("../models/Advertise");
+const Advertise = require("../models/advertise");
 
 const upload = require("../middleware/upload");
 
