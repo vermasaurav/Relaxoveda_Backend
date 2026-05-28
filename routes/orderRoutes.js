@@ -66,6 +66,51 @@ router.put(
       });
     }
   }
+
+
+
+
+  
+);
+
+
+
+
+router.put(
+  "/:id/payment-failed",
+
+  async (req, res) => {
+
+    try {
+
+      const order =
+        await Order.findByIdAndUpdate(
+
+          req.params.id,
+
+          {
+            paymentStatus:
+              "FAILED",
+          },
+
+          {
+            new: true,
+          }
+        );
+
+      res.json({
+        success: true,
+        order,
+      });
+
+    } catch (error) {
+
+      res.status(500).json({
+        success: false,
+      });
+
+    }
+  }
 );
 
 module.exports = router;
