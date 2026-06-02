@@ -5,7 +5,8 @@ const orderSchema = new mongoose.Schema(
     customerName: String,
 
     phone: String,
-
+    pincode: String,
+landmark: String,
     address: String,
 
     products: [
